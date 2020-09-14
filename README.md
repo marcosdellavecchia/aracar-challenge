@@ -15,4 +15,4 @@ En donde recibirás como parámetro un array de Strings que representan cada fil
 representan cada base nitrogenada del ADN. El patrón de la secuencia debe ser exacta (3
 secuencias coloreadas) como se ve a continuación:
 
-![Alt text](https://i.imgur.com/HC4XAU5.png "Matrices No-Mutante y Mutante") 
+![Imagen enunciado challenge Aracar](https://i.imgur.com/HC4XAU5.png "Matrices No-Mutante y Mutante") 
