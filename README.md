@@ -26,8 +26,10 @@ b) Crear una API REST, crear el servicio “/mutant/” en donde se pueda detect
 mutante, enviando la secuencia de ADN mediante un HTTP POST con un JSON el cual tenga el
 siguiente formato:
 
+```
 POST → /mutant/
 {“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+```
 
 En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso contrario, un 403-
 DNA isn't Mutant
