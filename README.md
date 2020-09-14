@@ -8,7 +8,7 @@ en su secuencia de ADN.
 Para eso te ha pedido crear un programa con un método o función con la siguiente firma (En lenguaje
 NodeJs):
 
-##boolean isMutant(String[] dna);
+## boolean isMutant(String[] dna);
 
 En donde recibirás como parámetro un array de Strings que representan cada fila de una matriz de
 (NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las cuales
