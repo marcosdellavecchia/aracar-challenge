@@ -1,5 +1,5 @@
 # aracar-challenge
-Aracar Developer Challenge Frontender
+### Aracar Developer Challenge Frontender
 
 Esta prueba técnica para Aracar tiene como fin identificar si un humano es mutante de acuerdo a la secuencia de su ADN.
 
