@@ -1,23 +1,14 @@
 # aracar-challenge
 Aracar Developer Challenge Frontender
 
-Magneto quiere reclutar la mayor cantidad de mutantes posibles para poder luchar contra los X-Men.
-Te ha contratado a ti para que desarrolles un proyecto que detecte si un humano es mutante basándose
-en su secuencia de ADN.
+Esta prueba técnica para Aracar tiene como fin identificar si un humano es mutante de acuerdo a la secuencia de su ADN.
 
-Para eso te ha pedido crear un programa con un método o función con la siguiente firma (En lenguaje
-NodeJs):
+Para eso, recibe como parámetro un array de strings que representan cada fila de una matriz y devuelve "true" si el ADN corresponde a un Mutante y "false" si corresponde a No-Mutante. Las letras de los Strings solo pueden ser: (A,T,C,G), las cuales representan cada base nitrogenada del ADN.
 
-```
-boolean isMutant(String[] dna);
-```
-
-En donde recibirás como parámetro un array de Strings que representan cada fila de una matriz de
-(NxN) con la secuencia del ADN. Las letras de los Strings solo pueden ser: (A,T,C,G), las cuales
-representan cada base nitrogenada del ADN. El patrón de la secuencia debe ser exacta (3
-secuencias coloreadas) como se ve a continuación:
+Para que un humano sea considerado Mutante, **el patrón de su ADN debe ser exacto como se ve en la secuencia coloreada** a continuación (debe contener 3 secuencias de manera excluyente):
 
 ![Imagen enunciado challenge Aracar](https://i.imgur.com/HC4XAU5.png "Matrices No-Mutante y Mutante") 
+
 
 **Nivel 1 – Junior:**
 
