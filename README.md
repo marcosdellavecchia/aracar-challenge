@@ -9,6 +9,9 @@ Para que un humano sea considerado Mutante, **el patrón de su ADN debe ser exac
 
 ![Imagen enunciado challenge Aracar](https://i.imgur.com/HC4XAU5.png "Matrices No-Mutante y Mutante") 
 
+## Tecnologías utilizadas
+- NodeJS
+- JavaScript
 
 **Nivel 1 – Junior:**
 
