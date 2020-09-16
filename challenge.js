@@ -1,12 +1,9 @@
-function isMutant(dnaString) {
+isMutant = (dnaString) => {
   const matchA = ["A", "A", "A", "A"];
   const matchC = ["C", "C", "C", "C"];
   const matchG = ["G", "G", "G", "G"];
-  const matchAJoin = matchA.join();
-  const matchCJoin = matchC.join();
-  const matchGJoin = matchG.join();
-  let dnaToAnalyse;
   let counter = 0;
+  let dnaToAnalyse;
   let i, j, k;
 
   // 1. Busca de forma horizontal la base nitrogenada C
@@ -21,7 +18,7 @@ function isMutant(dnaString) {
         dnaToAnalyse.push(dnaString[i][j + k]);
       }
       // d. Une los arreglos de letras para compararlos con las combinaciones buscadas en mutantes. Si hay coincidencia, suma 1 al contador
-      if (dnaToAnalyse.join() === matchCJoin) {
+      if (dnaToAnalyse.join() === matchC.join()) {
         counter++;
       }
     }
@@ -39,7 +36,7 @@ function isMutant(dnaString) {
         dnaToAnalyse.push(dnaString[j + k][i]);
       }
       // d. Une los arreglos de letras para compararlos con las combinaciones buscadas en mutantes. Si hay coincidencia, suma 1 al contador
-      if (dnaToAnalyse.join() === matchGJoin) {
+      if (dnaToAnalyse.join() === matchG.join()) {
         counter++;
       }
     }
@@ -52,7 +49,7 @@ function isMutant(dnaString) {
       for (k = 0; k < matchA.length; k++) {
         dnaToAnalyse.push(dnaString[i + k][j + k]);
       }
-      if (dnaToAnalyse.join() === matchAJoin) {
+      if (dnaToAnalyse.join() === matchA.join()) {
         counter++;
       }
     }
@@ -65,7 +62,7 @@ function isMutant(dnaString) {
       for (k = 0; k < matchA.length; k++) {
         dnaToAnalyse.push(dnaString[i + k][j - k]);
       }
-      if (dnaToAnalyse.join() === matchAJoin) {
+      if (dnaToAnalyse.join() === matchA.join()) {
         counter++;
       }
     }
@@ -85,7 +82,7 @@ function isMutant(dnaString) {
       adn: dnaString,
     };
   }
-}
+};
 
 //CASOS DE TESTEO
 
