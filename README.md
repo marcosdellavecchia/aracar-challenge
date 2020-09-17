@@ -26,10 +26,10 @@ En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso cont
 - Postman
 
 ## Funcionamiento
-1. Instalar NodeJS como entorno de ejecución para correr el programa de forma local
-2. Clonar el repositorio ``git clone https://github.com/marcosdellavecchia/aracar-challenge.git ``
-3. Ubicarse en el directorio \aracar-challenge\src y ejecutar el comando ``node index.js`` para levantar el servidor local
-4. Realizar la petición POST a la ruta http://localhost:3000/api/mutant con el siguiente formato: ``{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}``
+1. Instalar NodeJS como entorno de ejecución para correr el programa de forma local.
+2. Clonar el repositorio ``git clone https://github.com/marcosdellavecchia/aracar-challenge.git ``.
+3. Ubicarse en el directorio \aracar-challenge\src y ejecutar el comando ``node index.js`` para levantar el servidor local.
+4. Realizar la petición POST a la ruta http://localhost:3000/api/mutant con el siguiente formato: ``{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}``.
 
 ## API
 - Método HTTP: POST
