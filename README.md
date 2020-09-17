@@ -12,3 +12,5 @@ Para que un humano sea considerado Mutante, **el patrón de su ADN debe ser exac
 ## Tecnologías utilizadas
 - NodeJS
 - JavaScript
+- Express
+- Postman
