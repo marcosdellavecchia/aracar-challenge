@@ -1,0 +1,27 @@
+{
+  "name": "aracar-challenge",
+  "version": "1.0.0",
+  "description": "Esta prueba técnica para Aracar tiene como fin identificar si un humano es mutante de acuerdo a la secuencia de su ADN.",
+  "main": "challenge.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosdellavecchia/aracar-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcosdellavecchia/aracar-challenge/issues"
+  },
+  "homepage": "https://github.com/marcosdellavecchia/aracar-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

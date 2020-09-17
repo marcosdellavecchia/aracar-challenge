@@ -1,4 +1,6 @@
-isMutant = (dnaString) => {
+module.exports = { isMutant };
+
+function isMutant(dnaString) {
   const matchA = ["A", "A", "A", "A"];
   const matchC = ["C", "C", "C", "C"];
   const matchG = ["G", "G", "G", "G"];
@@ -71,18 +73,16 @@ isMutant = (dnaString) => {
   console.log("Cantidad de combinaciones en ADN:", counter);
   if (counter == 3) {
     //El ADN corresponde a un Mutante
-    return {
-      mutante: true,
-      adn: dnaString,
-    };
+    console.log("El ADN recibido es MUTANTE");
+    console.log("ADN:", dnaString);
+    return true;
   } else {
     //El ADN corresponde a un No-Mutante
-    return {
-      mutante: false,
-      adn: dnaString,
-    };
+    console.log("El ADN recibido es NO-MUTANTE");
+    console.log("ADN:", dnaString);
+    return false;
   }
-};
+}
 
 //CASOS DE TESTEO
 
