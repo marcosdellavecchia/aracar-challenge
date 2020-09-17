@@ -28,9 +28,9 @@ En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso cont
 
 ## Funcionamiento
 1. Instalar NodeJS como entorno de ejecución para correr el programa de forma local (https://nodejs.org/es/)
-2. Instalar las dependencias Express ``npm install express --save`` y Morgan ``npm install morgan --save``
-3. Clonar el repositorio ``git clone https://github.com/marcosdellavecchia/aracar-challenge.git ``.
-4. Ubicarse en el directorio \aracar-challenge\src y ejecutar el comando ``node index.js`` para levantar el servidor local.
+2. Clonar el repositorio ``git clone https://github.com/marcosdellavecchia/aracar-challenge.git ``.
+3. Ubicarse en el directorio \aracar-challenge\ y ejecutar el comando ``npm install`` para descargar las dependencias requeridas.
+4. Dirigirse a la carpeta src ingresando ``cd ./src`` y ejecutar el comando ``node index.js`` para levantar el servidor local.
 5. Realizar la petición POST a la ruta http://localhost:3000/api/mutant con el siguiente formato: ``{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}``.
 
 ## API
