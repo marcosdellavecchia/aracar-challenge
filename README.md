@@ -32,9 +32,9 @@ En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso cont
 4. Realizar la petición POST a la ruta http://localhost:3000/api/mutant con el siguiente formato: ``{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}``.
 
 ## API
-- Método HTTP: POST
-- Respuesta para ADN Mutante: 200 (OK)
-- Respuesta para ADN No-Mutante: 403 (Forbidden)
+- Método HTTP: **POST**
+- Respuesta para ADN Mutante: **200 (OK)**
+- Respuesta para ADN No-Mutante: **403 (Forbidden)**
 
 ## Algoritmo para detectar ADN mutante
 
