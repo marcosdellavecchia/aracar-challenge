@@ -10,7 +10,7 @@ router.post("/", (req, res) => {
   // Guarda en una constante el adn que recibe a traves del metodo POST
   const { dna } = req.body;
   // Ejecuta la funcion isMutant tomando como parametro el adn recibido. Si es true devuelve HTTP200 (OK). Caso contrario un 403 (DNA isn't Mutant)
-  if (mutant.isMutant(dna) == true) {
+  if (mutant.isMutant(dna)) {
     res.status(200).json("OK");
   } else {
     res.status(403).json("DNA isn't Mutant");
