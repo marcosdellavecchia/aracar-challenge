@@ -22,8 +22,9 @@ En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso cont
 ## Tecnologías utilizadas
 - NodeJS
 - JavaScript
-- Express
-- Postman
+- Express (Servidor)
+- Morgan (Middleware)
+- Postman (para realizar las peticiones a la API)
 
 ## Funcionamiento
 1. Instalar NodeJS como entorno de ejecución para correr el programa de forma local (https://nodejs.org/es/)
