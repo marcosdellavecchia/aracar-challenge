@@ -9,8 +9,36 @@ Para que un humano sea considerado Mutante, **el patrón de su ADN debe ser exac
 
 ![Imagen enunciado challenge Aracar](https://i.imgur.com/HC4XAU5.png "Matrices No-Mutante y Mutante") 
 
+## Consigna
+**Nivel 1 – Junior:**
+a) Realizar un programa en JavaScript que cumpla con el método pedido por Magneto.
+b) Crear una API REST, crear el servicio “/mutant/” en donde se pueda detectar si un humano es
+mutante, enviando la secuencia de ADN mediante un HTTP POST con un JSON el cual tenga el
+siguiente formato:
+``
+POST → /mutant/
+{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+``
+En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso contrario, un **403-
+DNA isn't Mutant**
+
 ## Tecnologías utilizadas
 - NodeJS
 - JavaScript
 - Express
 - Postman
+
+## Funcionamiento
+1. Instalar NodeJS como entorno de ejecución para correr el programa de forma local
+2. Clonar el repositorio ``git clone https://github.com/marcosdellavecchia/aracar-challenge.git ``
+3. Ubicarse en el directorio \aracar-challenge\src y ejecutar el comando ``node index.js``
+4. Realizar la petición POST a la ruta http://localhost:3000/api/mutant con el siguiente formato: ``{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}``
+
+## API
+- Método HTTP: POST
+- Respuesta para ADN Mutante: 200 (OK)
+- Respuesta para ADN No-Mutante: 403 (Forbidden)
+
+## Algoritmo para detectar ADN mutante
+
+
