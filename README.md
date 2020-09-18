@@ -39,6 +39,6 @@ En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso cont
 - Respuesta para ADN Mutante: **200 (OK)**
 - Respuesta para ADN No-Mutante: **403 (Forbidden)**
 
-## Funcionamiento del programa para detectar ADN mutante
+## Explicación del programa para detectar ADN mutante
 
 
