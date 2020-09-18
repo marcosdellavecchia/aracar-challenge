@@ -4,7 +4,9 @@ function isMutant(dnaString) {
   const matchA = ["A", "A", "A", "A"];
   const matchC = ["C", "C", "C", "C"];
   const matchG = ["G", "G", "G", "G"];
-  let counter = 0;
+  let counterA = 0;
+  let counterC = 0;
+  let counterG = 0;
   let dnaToAnalyse;
   let i, j, k;
 
@@ -19,9 +21,9 @@ function isMutant(dnaString) {
       for (k = 0; k < matchC.length; k++) {
         dnaToAnalyse.push(dnaString[i][j + k]);
       }
-      // d. Une los arreglos de letras para compararlos con las combinaciones buscadas en mutantes. Si hay coincidencia, suma 1 al contador
+      // d. Une los arreglos de letras para compararlos con las combinaciones buscadas en mutantes. Si hay coincidencia, suma 1 al contador de bases nitrogenadas C
       if (dnaToAnalyse.join() === matchC.join()) {
-        counter++;
+        counterC++;
       }
     }
   }
@@ -37,9 +39,9 @@ function isMutant(dnaString) {
       for (k = 0; k < matchG.length; k++) {
         dnaToAnalyse.push(dnaString[j + k][i]);
       }
-      // d. Une los arreglos de letras para compararlos con las combinaciones buscadas en mutantes. Si hay coincidencia, suma 1 al contador
+      // d. Une los arreglos de letras para compararlos con las combinaciones buscadas en mutantes. Si hay coincidencia, suma 1 al contador de bases nitrogenadas G
       if (dnaToAnalyse.join() === matchG.join()) {
-        counter++;
+        counterG++;
       }
     }
   }
@@ -52,7 +54,7 @@ function isMutant(dnaString) {
         dnaToAnalyse.push(dnaString[i + k][j + k]);
       }
       if (dnaToAnalyse.join() === matchA.join()) {
-        counter++;
+        counterA++;
       }
     }
   }
@@ -65,13 +67,22 @@ function isMutant(dnaString) {
         dnaToAnalyse.push(dnaString[i + k][j - k]);
       }
       if (dnaToAnalyse.join() === matchA.join()) {
-        counter++;
+        counterA++;
       }
     }
   }
 
-  console.log("Cantidad de combinaciones en ADN:", counter);
-  if (counter == 3) {
+  console.log(
+    "Cantidad de combinaciones en ADN:",
+    counterA + counterC + counterG
+  );
+
+  console.log("Bases nitrogenadas A:", counterA);
+  console.log("Bases nitrogenadas C:", counterC);
+  console.log("Bases nitrogenadas G:", counterG);
+
+  // Verifica que se haya encontrado cada una de las 3 bases nitrogenadas para definir a un mutante
+  if (counterA == 1 && counterC == 1 && counterG == 1) {
     //El ADN corresponde a un Mutante
     console.log("El ADN recibido es MUTANTE");
     console.log("ADN:", dnaString);
@@ -86,7 +97,7 @@ function isMutant(dnaString) {
 
 //CASOS DE TESTEO
 
-// Mutante (3 secuencias exactas)
+// Mutante (3 secuencias exactas, una de cada base nitrogenada)
 const testDna1 = ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"];
 
 // No-Mutante (4 secuencias)
