@@ -83,38 +83,38 @@ Dado que las combinaciones de bases nitrogenadas C, G y A se deben encontrar de 
 Cualquiera sea el patrón que estemos buscando, el primer paso consiste en recorrer cada fila del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de ellas.  
 `` for (i = 0; i < dnaString.length; i++) ``  
 
-### Paso 2: Recorrer cada letra contenida dentro de las filas
+#### Paso 2: Recorrer cada letra contenida dentro de las filas
 El siguiente paso consiste en **incluir un segundo ciclo for dentro del anterior** para poder acceder al contenido que hay dentro de cada fila previamente recorrida. En esta instancia buscamos analizar **combinaciones de 4 letras** que luego serán incluidas a la variable previamente inicializada "dnaToAnalyse".  
 `` for (j = 0; j <= dnaString[i].length - matchC.length; j++) ``  
 
-### Paso 3: Agregar a la variable dnaToAnalyse grupos de 4 letras para buscar coincidencias
+#### Paso 3: Agregar a la variable dnaToAnalyse grupos de 4 letras para buscar coincidencias
 El tercer y último ciclo for busca agrupar los datos recorridos en grupos de 4 letras para buscar las coincidencias planteadas en las variables "matchA", "matchC" y "matchG". La manera de agrupar las bases nitrogenadas va a variar según cada patrón buscado:
-##### Agrupamiento horizontal (buscando C)
+###### Agrupamiento horizontal (buscando C)
 ```
 for (k = 0; k < matchC.length; k++) {
 dnaToAnalyse.push(dnaString[i][j + k]); 
 ```  
 
-##### Agrupamiento vertical (buscando G)
+###### Agrupamiento vertical (buscando G)
 ```
 for (k = 0; k < matchG.length; k++) {
 dnaToAnalyse.push(dnaString[j + k][i]);
 ```  
 
-##### Agrupamiento oblicuo (buscando A)
+###### Agrupamiento oblicuo (buscando A)
 ```
 for (k = 0; k < matchA.length; k++) {
 dnaToAnalyse.push(dnaString[i + k][j + k])
 ```  
 
-### Paso 4: Comparando datos y buscando coincidencias
+#### Paso 4: Comparando datos y buscando coincidencias
 El último paso en este análisis consiste en unir los datos alojados en las variables "dnaToAnalyse" y "matchC", "matchG" o "matchA" según corresponda, a través del método .join( para luego probar su igualdad estricta. Si se verifica una combinación en los grupos de cuatro letras, se suma 1 al contador "counterC", "counterG" o "counterA" correspondiente. 
 ```
 if (dnaToAnalyse.join() === matchG.join()) {
 counterG++;
 ```  
 
-### Paso 5: Verificación final de coincidencias
+#### Paso 5: Verificación final de coincidencias
 Luego de haber recorrido la matriz en busca de cada patrón posible, sólo resta comparar los valores de cada contador C, G y A. Si se verifica que cada uno de ellos aloja exactamente 1 coincidencia, entonces estamos ante la presencia de ADN Mutante. Si esto no es así, el ADN es No-Mutante.
 ```
 if (counterA == 1 && counterC == 1 && counterG == 1) {
