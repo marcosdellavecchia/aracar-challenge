@@ -1,5 +1,3 @@
-module.exports = { isMutant };
-
 function isMutant(dnaString) {
   const matchA = ["A", "A", "A", "A"];
   const matchC = ["C", "C", "C", "C"];
@@ -8,7 +6,6 @@ function isMutant(dnaString) {
   let counterC = 0;
   let counterG = 0;
   let dnaToAnalyse;
-  let i, j, k;
 
   // 1. Busca de forma horizontal la base nitrogenada C
 
@@ -109,3 +106,5 @@ const testDna3 = ["ATGCGA", "ATCGTA", "AGAGTA", "ATGAGA", "CCACAA", "CACACA"];
 console.log(isMutant(testDna1));
 console.log(isMutant(testDna2));
 console.log(isMutant(testDna3));
+
+module.exports = { isMutant };
