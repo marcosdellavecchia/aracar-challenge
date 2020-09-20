@@ -73,8 +73,36 @@ Las coincidencias pueden encontrarse en cualquier lugar de la matriz, debiendo s
 - 1 secuencia de 4 letras C en forma horizontal.
 - 1 secuencia de 4 letras G en forma vertical.
 
-### Funcionamiento del algoritmo
-La funcion isMutant() recibe como parámetro un array con el siguiente formato: ``testDna = ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]``.   
-Dentro de la función se definen 3 constantes (matchA, matchB, matchC) que equivalen a un arreglo compuesto por cada una de las combinaciones de 4 letras posibles. Ej: ``matchA = ["A", "A", "A", "A"]``. De la misma forma se inicializan en cero 3 variables que cumplen la funcion de contadores, una por cada letra posible. Por último se declara una variable llamada dnaToAnalyse, donde va a alojarse temporalmente el string ingresado, y tres variables i, j y k que se utilizarán posteriormente en los ciclos for.
+### Función isMutant
+La funcion isMutant() recibe como parámetro un array con el siguiente formato: ``dnaString = ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]``.   
+Dentro de la función se definen 3 constantes (matchA, matchB, matchC) que equivalen a un arreglo compuesto por cada una de las combinaciones de 4 letras posibles. Ej: ``matchA = ["A", "A", "A", "A"]``. De la misma forma se inicializan en cero 3 variables que cumplen la funcion de contadores, una por cada letra posible. Por último se declara una variable llamada "dnaToAnalyse", donde va a alojarse temporalmente parte del string ingresado.
 
+### Ciclos For
+Dado que las combinaciones de bases nitrogenadas C, G y A se deben encontrar de forma horizontal, vertical y oblicua respectivamente, existen 3 ciclos para cada una de estas búsquedas.  
+#### Paso 1: Recorrer cada fila de la matriz
+Cualquiera sea el patrón que estemos buscando, el primer paso consiste en recorrer cada fila del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de ellas.  
+`` for (i = 0; i < dnaString.length; i++) ``  
 
+### Paso 2: Recorrer cada letra contenida dentro de las filas
+El siguiente paso consiste en **incluir un segundo ciclo for dentro del anterior** para poder acceder al contenido que hay dentro de cada fila previamente recorrida. En esta instancia buscamos analizar **combinaciones de 4 letras** que luego serán incluidas a la variable previamente inicializada "dnaToAnalyse".  
+`` for (j = 0; j <= dnaString[i].length - matchC.length; j++) ``  
+
+### Paso 3: Agregar a la variable dnaToAnalyse grupos de 4 letras para buscar coincidencias
+El tercer y último ciclo for busca agrupar los datos recorridos en grupos de 4 letras para buscar las coincidencias planteadas en las variables "matchA", "matchC" y "matchG". La manera de agrupar las bases nitrogenadas va a variar según cada patrón buscado:
+##### Agrupamiento horizontal (buscando C)
+```
+for (k = 0; k < matchC.length; k++) {
+dnaToAnalyse.push(dnaString[i][j + k]); 
+```  
+
+##### Agrupamiento vertical (buscando G)
+```
+for (k = 0; k < matchC.length; k++) {
+dnaToAnalyse.push(dnaString[i][j + k]); 
+```  
+
+##### Agrupamiento oblicuo (buscando A)
+```
+for (k = 0; k < matchC.length; k++) {
+dnaToAnalyse.push(dnaString[i][j + k]); 
+```  
