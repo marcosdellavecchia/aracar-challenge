@@ -19,14 +19,21 @@ POST → /mutant/
 ``
 En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso contrario, un **403-DNA isn't Mutant**
 
-## Tecnologías utilizadas
+## Tecnologías utilizadas - API
 - NodeJS
 - JavaScript
 - Express (Servidor)
 - Morgan (Middleware)
 - Postman (para realizar las peticiones a la API)
 
-## Funcionamiento
+## Tecnologías utilizadas - Sitio web
+- HTML
+- CSS
+- JavaScript
+- React
+- Reactstrap (para modals)
+
+## Funcionamiento de la API
 1. Instalar NodeJS como entorno de ejecución para correr el programa de forma local (https://nodejs.org/es/)
 2. Clonar el repositorio ``git clone https://github.com/marcosdellavecchia/aracar-challenge.git ``.
 3. Ubicarse en el directorio \aracar-challenge\ y ejecutar el comando ``npm install`` para descargar las dependencias requeridas.
@@ -34,7 +41,7 @@ En caso de verificar un mutante, debería devolver un **HTTP 200-OK**; caso cont
 5. Realizar la petición POST a la ruta http://localhost:3000/api/mutant/ con el siguiente formato: ``{“dna”:["ATGCGA","CAGTGC", "TTATGT","AGAAGG","CCCCTA","TCACTG"]}``.
 6. Si el string cumple con los requisitos (3 combinaciones exactas), la API va a devolver **HTTP 200-OK**. Caso contrario, va a retornar **403-DNA isn't Mutant**.
 
-## API
+## Peticiones a la API
 - Método HTTP: **POST**
 - Respuesta para ADN Mutante: **200 (OK)**
 - Respuesta para ADN No-Mutante: **403 (Forbidden)**
