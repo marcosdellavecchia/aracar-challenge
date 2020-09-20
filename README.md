@@ -108,11 +108,14 @@ dnaToAnalyse.push(dnaString[i + k][j + k])
 ```  
 
 ### Paso 4: Comparando datos y buscando coincidencias
-El último paso en este análisis consiste en unir los datos alojados en las variables "dnaToAnalyse" y "matchC", "matchG" o "matchA" según corresponda, a través del método .join( para luego probar su igualdad estricta. Si se verifica una combinación en los grupos de cuatro letras, se suma 1 al contador "counterC", "counterG" o "counterA" correspondiente.  Si al final de los 3 recorridos cada contador sumó exactamente 1 coincidencia, entonces estamos ante la presencia de un ADN Mutante.
+El último paso en este análisis consiste en unir los datos alojados en las variables "dnaToAnalyse" y "matchC", "matchG" o "matchA" según corresponda, a través del método .join( para luego probar su igualdad estricta. Si se verifica una combinación en los grupos de cuatro letras, se suma 1 al contador "counterC", "counterG" o "counterA" correspondiente. 
 ```
 if (dnaToAnalyse.join() === matchG.join()) {
 counterG++;
 ```  
+
+### Paso 5: Verificación final de coincidencias
+Luego de haber recorrido la matriz en busca de cada patrón posible, sólo resta comparar los valores de cada contador C, G y A. Si se verifica que cada uno de ellos aloja exactamente 1 coincidencia, entonces estamos ante la presencia de ADN Mutante. Si esto no es así, el ADN es No-Mutante.
 ```
 if (counterA == 1 && counterC == 1 && counterG == 1) {
     return true;
