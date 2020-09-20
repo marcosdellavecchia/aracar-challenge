@@ -123,3 +123,7 @@ if (counterA == 1 && counterC == 1 && counterG == 1) {
     return false;
   }
 ```
+
+## Sitio web para analizar ADN
+El algoritmo previamente explicado fue implementado en el sitio web **[Mutant Check](https://mutant-check.web.app/)**.  
+Para analizar un ADN se debe ingresar la secuencia respetando el siguiente formato `` `` y presionar el botón "Verificar ADN".
