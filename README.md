@@ -58,12 +58,18 @@ Utilizar siguientes lenguajes: HTML / Javascript / React):
 ## Explicación del programa para detectar ADN mutante
 El algoritmo que permite clasificar las secuencias de ADN en Mutante y No-Mutante se encuentra en el archivo dnaTest.js. El mismo consiste en una función que recibe un string y retorna true o false según corresponda. Junto con el resultado de la prueba, también imprime en consola la cantidad de combinaciones encontradas de cada base nitrogenada (A, C y G) y la cadena de ADN ingresada como se ve a continuación:  
 ``
-Cantidad de combinaciones en ADN: 3 &nbsp;
-Bases nitrogenadas A: 1 &nbsp;
-Bases nitrogenadas C: 1 &nbsp;
-Bases nitrogenadas G: 1 &nbsp;
-El ADN recibido es MUTANTE &nbsp;
-ADN: [ 'ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCCTA', 'TCACTG' ] &nbsp;
+Cantidad de combinaciones en ADN:
+
+Bases nitrogenadas A: 1
+
+Bases nitrogenadas C: 1
+
+Bases nitrogenadas G: 1
+
+El ADN recibido es MUTANTE
+
+ADN: [ 'ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCCTA', 'TCACTG' ]
+
 true  
 ``
 Las coincidencias pueden encontrarse en cualquier lugar de la matriz, debiendo sumar exactamente 3. Tienen que estar compuestas de la siguiente manera:
