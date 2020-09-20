@@ -10,7 +10,7 @@ Para que un humano sea considerado Mutante, **el patrón de su ADN debe ser exac
 ![Imagen enunciado challenge Aracar](https://i.imgur.com/HC4XAU5.png "Matrices No-Mutante y Mutante") 
 
 ## Consigna
-**Nivel 1 – Junior:**
+**Nivel 1 – Junior:**  
 a) Realizar un programa en JavaScript que cumpla con el método pedido por Magneto.  
 b) Crear una API REST, crear el servicio “/mutant/” en donde se pueda detectar si un humano es mutante, enviando la secuencia de ADN mediante un HTTP POST con un JSON el cual tenga el siguiente formato:  
 ``
@@ -58,12 +58,12 @@ Utilizar siguientes lenguajes: HTML / Javascript / React):
 ## Explicación del programa para detectar ADN mutante
 El algoritmo que permite clasificar las secuencias de ADN en Mutante y No-Mutante se encuentra en el archivo dnaTest.js. El mismo consiste en una función que recibe un string y retorna true o false según corresponda. Junto con el resultado de la prueba, también imprime en consola la cantidad de combinaciones encontradas de cada base nitrogenada (A, C y G) y la cadena de ADN ingresada como se ve a continuación:  
 ``
-Cantidad de combinaciones en ADN: 3  
-Bases nitrogenadas A: 1  
-Bases nitrogenadas C: 1  
-Bases nitrogenadas G: 1  
-El ADN recibido es MUTANTE  
-ADN: [ 'ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCCTA', 'TCACTG' ]  
+Cantidad de combinaciones en ADN: 3\
+Bases nitrogenadas A: 1\
+Bases nitrogenadas C: 1\
+Bases nitrogenadas G: 1\
+El ADN recibido es MUTANTE\
+ADN: [ 'ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCCTA', 'TCACTG' ]\
 true  
 ``
 Las coincidencias pueden encontrarse en cualquier lugar de la matriz, debiendo sumar exactamente 3. Tienen que estar compuestas de la siguiente manera:
