@@ -2,7 +2,7 @@
   "name": "aracar-challenge",
   "version": "1.0.0",
   "description": "Esta prueba técnica para Aracar tiene como fin identificar si un humano es mutante de acuerdo a la secuencia de su ADN.",
-  "main": "challenge.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon src/index.js"
   },
