@@ -73,7 +73,7 @@ Las coincidencias pueden encontrarse en cualquier lugar de la matriz, debiendo s
 - 1 secuencia de **4 letras G** en forma **vertical**.
 - 1 secuencia de **4 letras A** en forma **oblicua** (de derecha a izquierda).  
 
-Es importante tener en cuenta que, de existir una secuencia de 5 letras que cumpla con el criterio (por ejemplo 5 letras C horizontales) el programa lo considerará como 2 combinaciones de ese tipo y así podrá excluirlo de la condición de Mutante. Esto se debe a que, al desplazarnos una posición, podemos considerar dos agrupamientos de 4 tal como se ve en la ilustración:  
+Es importante tener en cuenta que en caso de existir una secuencia de 5 letras que cumpla con el criterio (por ejemplo 5 letras C horizontales) el programa lo considerará como 2 combinaciones de ese tipo y podrá así excluirlo de la condición de Mutante. Esto se debe a que, al desplazarnos una posición, podemos considerar dos agrupamientos de 4 tal como se ve en la ilustración:  
 
 ![Multiples coincidencias en una cadena](https://i.imgur.com/ok8Gh1q.png "Multiples coincidencias en una cadena") 
 
