@@ -69,9 +69,13 @@ El algoritmo que permite clasificar las secuencias de ADN en Mutante y No-Mutant
 ```
 
 Las coincidencias pueden encontrarse en cualquier lugar de la matriz, debiendo sumar exactamente 3. Tienen que estar compuestas de la siguiente manera:
-- 1 secuencia de 4 letras A en forma oblicua.
-- 1 secuencia de 4 letras C en forma horizontal.
-- 1 secuencia de 4 letras G en forma vertical.
+- 1 secuencia de **4 letras C** en forma **horizontal**.
+- 1 secuencia de **4 letras G** en forma **vertical**.
+- 1 secuencia de **4 letras A** en forma **oblicua** (de derecha a izquierda).  
+
+Es importante tener en cuenta que, de existir una secuencia de 5 letras que cumpla con el criterio (por ejemplo 5 letras C horizontales) el programa lo considerará como 2 combinaciones de ese tipo. esto es porque, desplazándonos una posición, podemos considerar dos agrupamientos de 4 tal como se ve en la ilustración:  
+
+![Multiples coincidencias en una cadena](https://i.imgur.com/ok8Gh1q.png "Multiples coincidencias en una cadena") 
 
 ### Función isMutant
 La funcion isMutant() recibe como parámetro un array con el siguiente formato: ``dnaString = ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]``.   
