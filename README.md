@@ -73,7 +73,7 @@ Las coincidencias pueden encontrarse en cualquier lugar de la matriz, debiendo s
 - 1 secuencia de **4 letras G** en forma **vertical**.
 - 1 secuencia de **4 letras A** en forma **oblicua** (de derecha a izquierda).  
 
-Es importante tener en cuenta que, de existir una secuencia de 5 letras que cumpla con el criterio (por ejemplo 5 letras C horizontales) el programa lo considerará como 2 combinaciones de ese tipo. esto es porque, desplazándonos una posición, podemos considerar dos agrupamientos de 4 tal como se ve en la ilustración:  
+Es importante tener en cuenta que, de existir una secuencia de 5 letras que cumpla con el criterio (por ejemplo 5 letras C horizontales) el programa lo considerará como 2 combinaciones de ese tipo y así podrá excluirlo de la condición de Mutante. Esto se debe a que, al desplazarnos una posición, podemos considerar dos agrupamientos de 4 tal como se ve en la ilustración:  
 
 ![Multiples coincidencias en una cadena](https://i.imgur.com/ok8Gh1q.png "Multiples coincidencias en una cadena") 
 
@@ -83,16 +83,20 @@ Dentro de la función se definen 3 constantes (matchA, matchB, matchC) que equiv
 
 ### Ciclos For
 Dado que las combinaciones de bases nitrogenadas C, G y A se deben encontrar de forma horizontal, vertical y oblicua respectivamente, existen 3 ciclos para cada una de estas búsquedas.  
-#### Paso 1: Recorrer cada fila de la matriz
-Cualquiera sea el patrón que estemos buscando, el primer paso consiste en recorrer cada fila del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de ellas.  
+#### Paso 1: Recorrer cada fila (o columna) de la matriz según corresponda
+Cualquiera sea el patrón que estemos buscando, el primer paso consiste en recorrer cada fila o columna del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 x 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de ellas.  
+##### Ejemplo: Recorriendo filas (buscando C)
 `` for (i = 0; i < dnaString.length; i++) ``  
+##### Ejemplo: Recorriendo columnas (buscando G)
+for (i = 0; i < dnaString[0].length; i++)  
 
-#### Paso 2: Recorrer cada letra contenida dentro de las filas
-El siguiente paso consiste en **incluir un segundo ciclo for dentro del anterior** para poder acceder al contenido que hay dentro de cada fila previamente recorrida. En esta instancia buscamos analizar **combinaciones de 4 letras** que luego serán incluidas a la variable previamente inicializada "dnaToAnalyse".  
+#### Paso 2: Recorrer cada columna (o fila) de la matriz según corresponda
+El siguiente paso consiste en **incluir un segundo ciclo for dentro del anterior** para poder acceder al contenido que hay dentro de cada fila / columna previamente recorrida. En esta instancia buscamos obtener combinaciones de letras que luego serán incluidas a la variable previamente inicializada "dnaToAnalyse".  
+##### Ejemplo: Recorriendo el contenido dentro de cada fila (buscando C)
 `` for (j = 0; j <= dnaString[i].length - matchC.length; j++) ``  
 
 #### Paso 3: Agregar a la variable dnaToAnalyse grupos de 4 letras para buscar coincidencias
-El tercer y último ciclo for busca agrupar los datos recorridos en grupos de 4 letras para buscar las coincidencias planteadas en las variables "matchA", "matchC" y "matchG". La manera de agrupar las bases nitrogenadas va a variar según cada patrón buscado:
+El tercer y último ciclo for utiliza las variables **i, j y k** que se fueron incrementando para agrupar los datos en **grupos de 4 letras** y así buscar las coincidencias planteadas en las variables "matchA", "matchC" y "matchG". La manera de agrupar las bases nitrogenadas va a variar según cada patrón buscado:
 ###### Agrupamiento horizontal (buscando C)
 ```
 for (k = 0; k < matchC.length; k++) {
