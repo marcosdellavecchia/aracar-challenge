@@ -82,7 +82,7 @@ La funcion isMutant() recibe como parámetro un array con el siguiente formato: 
 Dentro de la función se definen 3 constantes (matchA, matchB, matchC) que equivalen a un arreglo compuesto por cada una de las combinaciones de 4 letras posibles. Ej: ``matchA = ["A", "A", "A", "A"]``. De la misma forma se inicializan en cero 3 variables que cumplen la funcion de contadores, una por cada letra posible. Por último se declara una variable llamada "dnaToAnalyse", donde va a alojarse temporalmente parte del string ingresado.
 
 ### Ciclos For
-Dado que las combinaciones de bases nitrogenadas C, G y A se deben encontrar de forma horizontal, vertical y oblicua respectivamente, existen 3 ciclos para cada una de estas búsquedas.  
+Dado que las combinaciones de bases nitrogenadas C, G y A se deben encontrar de forma horizontal, vertical y oblicua respectivamente, existe 1 ciclo for para cada una de estas búsquedas.  
 #### Paso 1: Recorrer cada fila (o columna) de la matriz según corresponda
 El paso inicial consiste hacer un primer recorrido por cada fila o columna del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 x 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de sus filas o columnas segun corresponda.  
 ##### Ejemplo: Recorriendo filas (buscando C)
