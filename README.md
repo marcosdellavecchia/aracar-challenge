@@ -84,11 +84,11 @@ Dentro de la función se definen 3 constantes (matchA, matchB, matchC) que equiv
 ### Ciclos For
 Dado que las combinaciones de bases nitrogenadas C, G y A se deben encontrar de forma horizontal, vertical y oblicua respectivamente, existen 3 ciclos para cada una de estas búsquedas.  
 #### Paso 1: Recorrer cada fila (o columna) de la matriz según corresponda
-Cualquiera sea el patrón que estemos buscando, el primer paso consiste en recorrer cada fila o columna del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 x 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de ellas.  
+El paso inicial consiste hacer un primer recorrido por cada fila o columna del array ingresado. De esta forma, si ingresamos una cadena de ADN equivalente a un arreglo de 6 x 6 posiciones como se ve en el ejemplo, el ciclo for va recorrer cada una de sus filas o columnas segun corresponda.  
 ##### Ejemplo: Recorriendo filas (buscando C)
 `` for (i = 0; i < dnaString.length; i++) ``  
 ##### Ejemplo: Recorriendo columnas (buscando G)
-for (i = 0; i < dnaString[0].length; i++)  
+``for (i = 0; i < dnaString[0].length; i++)``  
 
 #### Paso 2: Recorrer cada columna (o fila) de la matriz según corresponda
 El siguiente paso consiste en **incluir un segundo ciclo for dentro del anterior** para poder acceder al contenido que hay dentro de cada fila / columna previamente recorrida. En esta instancia buscamos obtener combinaciones de letras que luego serán incluidas a la variable previamente inicializada "dnaToAnalyse".  
