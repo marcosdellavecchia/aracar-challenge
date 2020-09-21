@@ -116,7 +116,7 @@ dnaToAnalyse.push(dnaString[i + k][j + k])
 ```  
 
 #### Paso 4: Comparando datos y buscando coincidencias
-El último paso en este análisis consiste en unir los datos alojados en las variables "dnaToAnalyse" y "matchC", "matchG" o "matchA" según corresponda, a través del método .join( para luego probar su igualdad estricta. Si se verifica una combinación en los grupos de cuatro letras, se suma 1 al contador "counterC", "counterG" o "counterA" correspondiente. 
+El último paso en este análisis consiste en unir los datos alojados en las variables "dnaToAnalyse" y "matchC", "matchG" o "matchA" según corresponda, a través del método .join() para luego probar su igualdad estricta. Si se verifica una combinación en los grupos de cuatro letras, se suma 1 al contador "counterC", "counterG" o "counterA" correspondiente. 
 ```
 if (dnaToAnalyse.join() === matchG.join()) {
 counterG++;
