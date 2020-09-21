@@ -90,7 +90,7 @@ El paso inicial consiste hacer un primer recorrido por cada fila o columna del a
 ##### Ejemplo: Recorriendo columnas (buscando G)
 ``for (i = 0; i < dnaString[0].length; i++)``  
 
-#### Paso 2: Recorrer cada columna (o fila) de la matriz según corresponda
+#### Paso 2: Recorrer cada columna (o fila) de la matriz por segunda vez
 El siguiente paso consiste en **incluir un segundo ciclo for dentro del anterior** para poder acceder al contenido que hay dentro de cada fila / columna previamente recorrida. En esta instancia buscamos obtener combinaciones de letras que luego serán incluidas a la variable previamente inicializada "dnaToAnalyse".  
 ##### Ejemplo: Recorriendo el contenido dentro de cada fila (buscando C)
 `` for (j = 0; j <= dnaString[i].length - matchC.length; j++) ``  
